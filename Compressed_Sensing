@@ -1,0 +1,6 @@
+Compressed sensing recon is currently most efficient when implemented on the cluster.  It is therefore recommended that all CS recon work be done here.
+
+For recon on a regular basis, there are three important commands to know about (all called from the Matlab command line):
+1) CSDTI_recon_on_cluster -- Stable code, but does not support multi-echo scans or large arrays (due to inefficient memory management).
+2) CSDTI_recon_on_cluster_TESTER -- Code "in development", but can handle large arrays and multi-echo scans.  
+3) CS_recon_QA_exec -- Quality assurance for long DTI scans, allowing for up to 3 arbitrary (completed) volumes to be reconstructed from a DTI scan which is still in progress.  IT IS HIGHLY RECOMMENDED that this be part of the standard protocol for CS DTI acquistions, running on the first B0 volume, alongside at least one b-volumes.
